@@ -60,7 +60,7 @@ function GetPoVRayIndent()
   " Analyse previous nonempty line.
   let chg = 0
   let chg = chg + s:MatchCount(plnum, '[[{(]')
-  let chg = chg + s:MatchCount(plnum, '#\s*\%(if\|ifdef\|ifndef\|switch\|while\|macro\|else\)\>')
+  let chg = chg + s:MatchCount(plnum, '#\s*\%(if\|ifdef\|ifndef\|switch\|while\|for\|macro\|else\)\>')
   let chg = chg - s:MatchCount(plnum, '#\s*end\>')
   let chg = chg - s:MatchCount(plnum, '[]})]')
   " Dirty hack for people writing #if and #else on the same line.
